@@ -10,18 +10,11 @@ html {
 
 body {
   position: relative;
-  background-image: url("./images/background1.png");
+  background-image: url("./images/background5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* animation: moveBackground 200s linear infinite; */
   overflow: hidden;
-}
-
-@keyframes moveBackground {
-  100% {
-    background-position: 2000px 2000px;
-  }
 }
 
 .app-container {
@@ -44,14 +37,48 @@ body {
   text-align: center;
   min-height: 80vh;
   padding: 16px 32px;
+  overflow: auto;
 }
 
-.game-container h2{
+@media (width > 1100px) {
+  .game-slide {
+    display: flex;
+  }
+}
+
+.game-container {
+  /* display: inline-block; */
+  display: flex;
+  padding: 14px;
+}
+
+.game {
+  display: inline-block;
+  padding: 5vw;
+}
+
+.game h2 {
   color: white;
 }
 
-.game-container img{
-  width: 60%;
-  height: 60%;
-  padding: 10px;
+.game img {
+  text-align: center;
+  width: 350px;
+  height: 250px;
+  padding-top: 15px;
+  border-radius: 15%;
+}
+
+.game img:hover {
+  transition: all 0.3s linear;
+  transform: scale(1.1);
+}
+
+.scroll-btn {
+  color: white;
+  cursor: pointer;
+}
+
+.scroll-btn:hover {
+  transform: translateY(-5px);
 }
